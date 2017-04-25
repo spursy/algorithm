@@ -1,3 +1,7 @@
+/**
+ * if current data is less than previous,
+ * then change the current data with previous one.
+ */
 exports.insertionSort = function (arr) {
     var length = arr.length;
     for (var i = 1; i < length; i ++) {
@@ -13,7 +17,11 @@ exports.insertionSort = function (arr) {
     }
     return arr;
 } 
-
+/**
+* if current data is less than previous,
+ * do not change the position immediately.
+ *  Only change previous to current one.
+ */
 exports.insertionSortHigh = function (arr) {
     var length = arr.length;
     for (var i = 0; i < length; i ++) {

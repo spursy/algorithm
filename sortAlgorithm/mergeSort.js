@@ -1,4 +1,5 @@
 var _ = require('lodash')
+var insertionSort = require('./insertionSort')
 
 exports.mergeSort = function(arr) {
     var length = arr.length;
@@ -7,10 +8,15 @@ exports.mergeSort = function(arr) {
 
 function _mergeSort(arr, left, right) {
     if (right - left <= 0)  return;
+    else (right - left <= 20 )
+        insertionSort.insertionSortHigh(arr);
+
     var middle = parseInt((right + left) / 2);
     _mergeSort(arr, left, middle);
     _mergeSort(arr, middle+1, right);
-    _merge(arr, middle, left, right);
+    //Optimize the performance.
+    if (arr[middle] < arr[middle + 1])
+        _merge(arr, middle, left, right);
 }
 
 function _merge(arr, middle, left, right) {    
