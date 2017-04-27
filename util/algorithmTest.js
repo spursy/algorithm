@@ -4,12 +4,13 @@ exports.processTimeTest = function (testFunction, arr) {
     var endTime = new Date().getTime();
     var interval = (endTime - startTime)/ 1000;
     console.log("Processed date time is " + interval);
+
+    // console.log(arr)
     try {
         verifyDecreaseSort(arr);
     }
     catch(e) {
-        console.log("err 123")
-        console.log(e.message)
+        console.log("decrease sort function is not right.")
     }
     return result;
 } 
