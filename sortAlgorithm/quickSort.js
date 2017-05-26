@@ -12,13 +12,13 @@ function _quickSort(arr, left, right) {
 
 function _partition(arr, left, right) {
     var v = arr[left];
-    var j = l;
+    var j = left;
     for(var i = left + 1; i <= right; i ++) {
         if (arr[i] < v) {
-            swap(arr[j + 1], arr[i]);
+            [arr[j + 1], arr[i]] = [arr[i], arr[j+1]];
             j ++;
         }
     }
-    swap(arr[l], arr[j]);
+    [arr[left], arr[j]] = [arr[j], arr[left]];
     return j;
 }

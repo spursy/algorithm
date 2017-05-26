@@ -5,17 +5,18 @@ var insertionSort = require('./insertionSort')
 var mergeSort = require('./mergeSort')
 var optimizeMergeSort = require('./optimizeMergeSort')
 var quickSelectSort = require('./quickSelectSort');
+var quickSort = require('./quickSort');
 var _ = require('lodash')
 
-var randomSelection = randomClass.getIntRandom(10000000, 2, 100000000000000)
+var randomSelection = randomClass.getIntRandom(100, 2, 100000000000000)
 // var randomSelection = randomClass.getNearlyOrderRandom(10, 2, 100000, 3)
-console.log(randomSelection);
 
 var randomInsertion = _.clone(randomSelection)
 var randomInsertionCopy = _.clone(randomSelection)
 var randomMergeSort = _.clone(randomSelection)
 var optimizeRandomMergeSort = _.clone(randomSelection)
 var randomQuickSelectSort = _.clone(randomSelection)
+
 
 // //seelction order 
 // console.log("selection order:::")
@@ -31,14 +32,20 @@ var randomQuickSelectSort = _.clone(randomSelection)
 // var resultMergeSort = algorithmTest.processTimeTest(mergeSort.mergeSort, randomMergeSort)
 
 // optimize merge order
-console.log("optimize merge order:::")
-var resultMergeSort = algorithmTest.processTimeTest(optimizeMergeSort.optimizeMergeSort, optimizeRandomMergeSort)
+// console.log("optimize merge order:::")
+// var resultMergeSort = algorithmTest.processTimeTest(optimizeMergeSort.optimizeMergeSort, optimizeRandomMergeSort)
 
 // quickSelectSort
 // var randomTemp = [2, 93, 24, 83];
-console.log('quick Select Sort:::')
-algorithmTest.processTimeTest(quickSelectSort.quickSelectSort, randomQuickSelectSort)
+// console.log('quick Select Sort:::')
+// algorithmTest.processTimeTest(quickSelectSort.quickSelectSort, randomQuickSelectSort)
 
+/**
+ * quick sort.
+ */
+var quickSortSort = _.clone(randomSelection)
+console.log('quick sort function');
+algorithmTest.processTimeTest(quickSort.quickSort, quickSortSort);
 
 
 

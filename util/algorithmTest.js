@@ -12,6 +12,7 @@ exports.processTimeTest = function (testFunction, arr) {
     catch(e) {
         console.log("decrease sort function is not right.")
     }
+    console.log(arr);
     return result;
 } 
 

@@ -9,7 +9,8 @@
             "type": "node",
             "request": "launch",
             "name": "启动程序",
-            "program": "${workspaceRoot}/sortAlgorithm/sortBasic.js"
+            "program": "${file}"
+            //  "${workspaceRoot}/sortAlgorithm/sortBasic.js"
         },
         {
             "type": "node",
