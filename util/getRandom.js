@@ -17,7 +17,7 @@ exports.getNearlyOrderRandom = function(length, rangeL, rangeW, index) {
         //change some data position.
         for (var j = 0; j<index; j++) {
             var positionOne = parseInt(Math.random() * length);
-            var positionTwo =  length - positionOne;
+            var positionTwo =  length - positionOne - 1;
             var temp = arr[positionOne];
             arr[positionOne] = arr[positionTwo];
             arr[positionTwo] = temp;
