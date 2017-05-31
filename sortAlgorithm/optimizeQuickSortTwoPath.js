@@ -1,4 +1,4 @@
-exports.quickSelectSort = function (arr) {
+exports.optimizeQuickSort = function (arr) {
     quickSort(arr, 0, arr.length - 1);
 }
 
@@ -13,14 +13,15 @@ function quickSort(arr, left, right) {
                 j --;
             }
             if (i == j) break;
-            arr[i++] = arr[j];
 
             // Get smaller one than temp from begin
-            while (i < j && temp > arr[i]) {
+            while (i < j && temp >= arr[i]) {
                 i ++;     
             }
             if (i == j) break;
-            arr[j--] = arr[i];
+            // change the value
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+            i ++, j--;
         }
         
         if (i == j)
