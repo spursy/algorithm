@@ -10,7 +10,7 @@ var optimizeQuickSort = require('./optimizeQuickSort');
 var _ = require('lodash')
 
 var randomSelection = randomClass.getIntRandom(100, 2, 100000000000000)
-var nearlyRandomSelection = randomClass.getNearlyOrderRandom(3, 2, 100000, 3)
+var nearlyRandomSelection = randomClass.getNearlyOrderRandom(10000, 2, 100000, 3)
 
 var randomInsertion = _.clone(randomSelection)
 var randomInsertionCopy = _.clone(randomSelection)
@@ -50,10 +50,17 @@ var randomQuickSelectSort = _.clone(randomSelection)
 /**
  * quick sort.
  */
-// var quickSortSort = _.clone(nearlyRandomSelection);
-// console.log('quick sort function');
-// algorithmTest.processTimeTest(optimizeQuickSort.optimizeQuickSort, quickSortSort);
-    // algorithmTest.processTimeTest(quickSort.quickSort, quickSortSort);
+var quickSortSort = _.clone(nearlyRandomSelection);
+var quickSortSortForOptimize = _.clone(nearlyRandomSelection);
+
+console.log("Statrt ..........")
+console.log('quick sort function');
+// algorithmTest.processTimeTest(quickSort.quickSort, quickSortSort, false);
+
+console.log("Statrt ..........")
+console.log('optimize quick sort function');
+algorithmTest.processTimeTest(optimizeQuickSort.optimizeQuickSort, quickSortSortForOptimize, false); 
+
 
 
 

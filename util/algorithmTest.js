@@ -1,4 +1,4 @@
-exports.processTimeTest = function (testFunction, arr) {
+exports.processTimeTest = function (testFunction, arr, disPlayResult) {
     var startTime = new Date().getTime();
     var result = testFunction(arr);
     var endTime = new Date().getTime();
@@ -12,7 +12,10 @@ exports.processTimeTest = function (testFunction, arr) {
     catch(e) {
         console.log("decrease sort function is not right.")
     }
-    console.log(arr);
+    if (disPlayResult === undefined || disPlayResult)
+        console.log(arr);
+    console.log('End ...........');
+    process.stdout.write('\n');
     return result;
 } 
 
