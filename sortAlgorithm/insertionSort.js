@@ -24,9 +24,9 @@ exports.insertionSort = function (arr) {
  */
 exports.insertionSortHigh = function (arr) {
     var length = arr.length;
-    for (var i = 0; i < length; i ++) {
-        var temp = arr[i + 1]
-        var j = i+1;
+    for (var i = 1; i < length; i ++) {
+        var temp = arr[i]
+        var j = i;
         for (; j > 0 && temp < arr[j-1]; j --) {
             arr[j] = arr[j-1]
         }

@@ -18,17 +18,23 @@ var randomMergeSort = _.clone(randomSelection)
 var optimizeRandomMergeSort = _.clone(randomSelection)
 var randomQuickSelectSort = _.clone(randomSelection)
 
-
-// //seelction order 
+/**
+ * seelction order 
+ */
 // console.log("selection order:::")
 // var result = algorithmTest.processTimeTest(selectionSort.selectionSort, randomSelection)
-// // insert order
+
+/**
+ * insertion order.
+ */
 // console.log("insertion order:::")
 // var resultCopy = algorithmTest.processTimeTest(insertionSort.insertionSort, randomInsertion)
-// //optimize insert order
 // console.log("optimize insertion order:::")
 // var resultHigh = algorithmTest.processTimeTest(insertionSort.insertionSortHigh, randomInsertionCopy)
-// merge order
+
+/**
+ * merge order.
+ */
 // console.log("merge order:::")
 // var resultMergeSort = algorithmTest.processTimeTest(mergeSort.mergeSort, randomMergeSort)
 
@@ -44,9 +50,9 @@ var randomQuickSelectSort = _.clone(randomSelection)
 /**
  * quick sort.
  */
-var quickSortSort = _.clone(nearlyRandomSelection);
-console.log('quick sort function');
-algorithmTest.processTimeTest(optimizeQuickSort.optimizeQuickSort, quickSortSort);
+// var quickSortSort = _.clone(nearlyRandomSelection);
+// console.log('quick sort function');
+// algorithmTest.processTimeTest(optimizeQuickSort.optimizeQuickSort, quickSortSort);
     // algorithmTest.processTimeTest(quickSort.quickSort, quickSortSort);
 
 
