@@ -10,7 +10,7 @@ var optimizeQuickSortTwoPath = require('./optimizeQuickSortTwoPath');
 var _ = require('lodash')
 
 var randomSelection = randomClass.getIntRandom(100, 2, 100000000000000)
-var nearlyRandomSelection = randomClass.getNearlyOrderRandom(10000, 2, 1000, 3)
+var nearlyRandomSelection = randomClass.getNearlyOrderRandom(10000, 2, 1000, 2, true)
 
 var randomInsertion = _.clone(randomSelection)
 var randomInsertionCopy = _.clone(randomSelection)
@@ -52,7 +52,7 @@ var randomQuickSelectSort = _.clone(randomSelection)
  */
 var quickSortSort = _.clone(nearlyRandomSelection);
 var quickSortSortForOptimize = _.clone(nearlyRandomSelection);
-quickSortSortForOptimize2 = _.clone(nearlyRandomSelection);
+var quickSortSortForOptimize2 = _.clone(nearlyRandomSelection);
 
 console.log("Statrt ..........")
 console.log('quick sort function');
@@ -64,7 +64,7 @@ algorithmTest.processTimeTest(optimizeQuickSort.optimizeQuickSort, quickSortSort
 
 console.log('Start ..........');
 console.log('optimize quick sort by two path');
-algorithmTest.processTimeTest(optimizeQuickSortTwoPath.optimizeQuickSort, quickSortSortForOptimize2); 
+algorithmTest.processTimeTest(optimizeQuickSortTwoPath.optimizeQuickSort, quickSortSortForOptimize2, false); 
 
 
 

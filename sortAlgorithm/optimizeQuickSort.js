@@ -17,12 +17,13 @@ function _quickSort(arr, left, right) {
 
 function _partition(arr, left, right) {
     var random = Math.random() * (right - left) + left;
-    var temp = arr[random];
+
+    [arr[random], arr[left]] = [arr[left], arr[random]]
     // partition position.
     var i = left;
     // foreach cursor
     for(var j = left + 1;  j <= right; j ++) {
-        if (temp > arr[j]) {
+        if (arr[left] > arr[j]) {
             i ++;
             [arr[i], arr[j]] = [arr[j], arr[i]];
         }

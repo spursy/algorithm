@@ -8,11 +8,14 @@ exports.getIntRandom = function (length, rangeL, rangeW) {
     return arr;
 }
 
-exports.getNearlyOrderRandom = function(length, rangeL, rangeW, index) {
+exports.getNearlyOrderRandom = function(length, rangeL, rangeW, index, intParse) {
         var arr = [];
         var average = (rangeW - rangeL) / length;
         for (var i = 0; i < length; i++) {
-            arr.push(rangeL + i * average);
+            if (intParse == undefined || !intParse)
+                arr.push(rangeL + i * average);
+            else 
+                arr.push(parseInt(rangeL + i * average));
         }
         //change some data position.
         for (var j = 0; j<index; j++) {
