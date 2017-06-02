@@ -13,6 +13,7 @@ function _quickSort(arr, left, right) {
 
 function _partition2(arr, left, right) {
     var random = parseInt(Math.random() * (right - left) + left);
+     
     [arr[left], arr[random]] = [arr[random], arr[left]];
 
     var i = left + 1, j = right;
@@ -29,5 +30,5 @@ function _partition2(arr, left, right) {
         j --;
     }
     [arr[left], arr[j]] = [arr[j], arr[left]];
-    return i;
+    return j;
 }

@@ -12,7 +12,7 @@ function _quickSort(arr, left, right) {
 
     var p = _partition(arr, left, right);
     _quickSort(arr, left, p-1);
-    _quickSort(arr, p + 1, right);
+    _quickSort(arr, p + 1, right); 
 }
 
 function _partition(arr, left, right) {
