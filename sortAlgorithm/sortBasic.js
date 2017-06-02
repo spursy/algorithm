@@ -7,9 +7,10 @@ var optimizeMergeSort = require('./optimizeMergeSort')
 var quickSort = require('./quickSort');
 var optimizeQuickSort = require('./optimizeQuickSort');
 var optimizeQuickSortTwoPath = require('./optimizeQuickSortTwoPath');
+var optimizeQuickSortThreePath = require('./optimizeQuickSortThreePath');
 var _ = require('lodash')
 
-var randomSelection = randomClass.getIntRandom(100, 2, 100000000000000)
+var randomSelection = randomClass.getIntRandom(5, 2, 1000)
 var nearlyRandomSelection = randomClass.getNearlyOrderRandom(10000, 2, 1000, 2, true)
 
 var randomInsertion = _.clone(randomSelection)
@@ -52,19 +53,26 @@ var randomQuickSelectSort = _.clone(randomSelection)
  */
 var quickSortSort = _.clone(nearlyRandomSelection);
 var quickSortSortForOptimize = _.clone(nearlyRandomSelection);
-var quickSortSortForOptimize2 = _.clone(nearlyRandomSelection);
+var quickSortSortForOptimize2 = _.clone(randomSelection);
+var quickSortSortForOptimize3 = _.clone(randomSelection);
 
-console.log("Statrt ..........")
-console.log('quick sort function');
-algorithmTest.processTimeTest(quickSort.quickSort, quickSortSort, false);
 
+// console.log("Statrt ..........")
+// console.log('quick sort function');
+// algorithmTest.processTimeTest(quickSort.quickSort, quickSortSort, false);
+var data1 = [866, 880,227,385,456];
 console.log("Statrt ..........")
 console.log('optimize quick sort function');
-algorithmTest.processTimeTest(optimizeQuickSort.optimizeQuickSort, quickSortSortForOptimize, false); 
+algorithmTest.processTimeTest(optimizeQuickSort.optimizeQuickSort, data1, true); 
 
-console.log('Start ..........');
-console.log('optimize quick sort by two path');
-algorithmTest.processTimeTest(optimizeQuickSortTwoPath.optimizeQuickSort, quickSortSortForOptimize2, false); 
+// var data = [866, 880,227,385,456];
+// console.log('Start ..........');
+// console.log('optimize quick sort by two path');
+// algorithmTest.processTimeTest(optimizeQuickSortTwoPath.optimizeQuickSort, data, true); 
+
+// console.log('Start ..........');
+// console.log('optimize quick sort by three path');
+// algorithmTest.processTimeTest(optimizeQuickSortThreePath.optimizeQuickSort, quickSortSortForOptimize3, true); 
 
 
 
