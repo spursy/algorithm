@@ -1,5 +1,5 @@
-var randomClass = require('../util/getRandom')
-var algorithmTest = require('../util/algorithmTest')
+var randomClass = require('../utility/arrayUtility')
+var algorithmTest = require('../utility/algorithmTest')
 var selectionSort = require('./selectionSort')
 var insertionSort = require('./insertionSort')
 var mergeSort = require('./mergeSort')
