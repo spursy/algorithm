@@ -1,5 +1,9 @@
 var heapSort = require('./heapSort');
+var verifyUtility = require('./verifySortOrder');
+var randomClass = require('../utility/arrayUtility')
 
-let arr = [12,5,19,4,20,8,31]
+
+let arr = randomClass.getIntRandom(100, 1, 88888);
 let sortArr = heapSort.heapSort(arr);
-console.log('sortArr::' + sortArr);
+let isValid = verifyUtility.verifySortOrder(sortArr)
+if (isValid) console.log('sortArr::' + sortArr);
