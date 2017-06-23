@@ -1,6 +1,7 @@
 /**
  * Calculating reversed order number.
  */
-var getRandom = require('../../utility/arrayUtility');
+var arrayUtility = require('../../utility/arrayUtility');
+var randomArray = arrayUtility.getIntRandom(10, 5, 50);
 
-var randomArray = getRandom.getRandom();
+
